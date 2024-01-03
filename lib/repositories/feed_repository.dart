@@ -139,11 +139,17 @@ class FeedRepository {
     required int feedLength,
   }) async {
     try {
+      // 전체 피드 검색
       Query<Map<String, dynamic>> query = await firebaseFirestore
           .collection('feeds')
-          .where('uid', isEqualTo: uid)
+          //.where('uid',  isEqualTo: uid) // firebase 업데이트로 인해 사용 불가
           .orderBy('createAt', descending: true)
           .limit(feedLength);
+
+      // uid 가 null 이 아닐 경우(특정 유저의 피드를 가져올 경우) 조건 추가
+      if (uid != null) {
+        query = query.where('uid', isEqualTo: uid);
+      }
 
       if (feedId != null) {
         DocumentSnapshot<Map<String, dynamic>> startDocRef =
