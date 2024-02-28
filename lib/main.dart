@@ -5,7 +5,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:instagram_clone/firebase_options.dart';
-import 'package:instagram_clone/providers/auth/auth_provider.dart';
+import 'package:instagram_clone/providers/auth/auth_provider.dart' as myAuthProvider;
 import 'package:instagram_clone/providers/auth/auth_state.dart';
 import 'package:instagram_clone/providers/comment/comment_provider.dart';
 import 'package:instagram_clone/providers/comment/comment_state.dart';
@@ -79,8 +79,8 @@ class MyApp extends StatelessWidget {
           create: (context) => FirebaseAuth.instance.authStateChanges(),
           initialData: null,
         ),
-        StateNotifierProvider<AuthProvider, AuthState>(
-          create: (context) => AuthProvider(),
+        StateNotifierProvider<myAuthProvider.AuthProvider, AuthState>(
+          create: (context) => myAuthProvider.AuthProvider(),
         ),
         StateNotifierProvider<UserProvider, UserState>(
           create: (context) => UserProvider(),
