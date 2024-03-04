@@ -1,4 +1,5 @@
-# instagram_clone
+https://www.youtube.com/watch?v=1QGWCzYNulQ&list=PL9mWH7l2hU3NN1W5pOyKTI9XV7Tes9RkI&index=2
+
 1.Flutter 개발환경 마련(SDK, 안드로이드스튜디오 등등)
 
 2.가상기기 설정
