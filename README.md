@@ -4,7 +4,6 @@
 2.가상기기 설정
 
 3.dependency, 플러그인 
-
 command : flutter pub get 
 
 3.Firebase 시작
@@ -14,12 +13,17 @@ command : flutter pub get
 firestore & storage 두개 설정 필요
 
 command : allow read write ~~ 2024.02.21
+
 위의 부분을
+
 command : allow read, write:
+
 command :   if request.auth != null;
+
 로 바꿔야함
 
 5. Flutter프로젝트에 Firebase 연동하기
+
 ! Node 설치 -안정적 버전
 
 ! Git 설치
@@ -27,12 +31,16 @@ command :   if request.auth != null;
 **!! 플러터 아이콘 선택 후 순서 따르기**중요
 
 5-2.안드로이드 스튜디오 돌아와서
+
 ! >> npm~~ 명령어 터미널에 실행
 
-! >> firebase login      (로그인)
+
+! >> firebase login(로그인)
+
 
 ! FlutterFire Cli 관련 명령어 2개 터미널에 실행
 android기기에서만 실행
+
 
 ! >> firebase init
 이후 엔터
