@@ -4,6 +4,7 @@
 2.가상기기 설정
 
 3.dependency, 플러그인 
+
 command : flutter pub get 
 
 3.Firebase 시작
